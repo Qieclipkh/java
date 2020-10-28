@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resource xmlns="http://dataexchange.court.gov.cn/2009/data" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <brief>
+        <count>2</count>
+    </brief>
+    <data>
+        <result>
+            <n_id>815383091</n_id>
+            <c_version>3.2.0M2</c_version>
+            <d_updatetime>2019-11-04 18:31:08.261866</d_updatetime>
+        </result>
+        <result>
+            <n_id>2132132131</n_id>
+            <c_version><![CDATA[呈请对犯罪嫌疑人呈请逮捕,理由如下: 2019年9月27日21时许,我所民警汇同南海区公安分局经侦大队民警girel073、fieowergirl007& #31;salaliraitewd这三个微信。]]></c_version>
+            <d_updatetime>2020-03-12 11:29:37.0</d_updatetime>
+        </result>
+    </data>
+</resource>
