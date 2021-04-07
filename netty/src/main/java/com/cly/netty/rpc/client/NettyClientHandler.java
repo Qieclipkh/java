@@ -37,8 +37,8 @@ public class NettyClientHandler extends SimpleChannelInboundHandler<String> impl
      */
     @Override
     protected synchronized void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
-        System.out.println(ctx.pipeline().hashCode());
-        System.out.println("客户端收到结果"+msg);
+        //System.out.println(ctx.pipeline().hashCode());
+        //System.out.println("客户端收到结果"+msg);
         result = msg;
         notify();
     }
@@ -75,4 +75,12 @@ public class NettyClientHandler extends SimpleChannelInboundHandler<String> impl
     public void setParam(String param) {
         this.param = param;
     }
+
+
+    public synchronized String  execute() throws Exception {
+        ctx.writeAndFlush(param);
+        wait();
+        return result;
+    }
+
 }

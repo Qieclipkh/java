@@ -34,7 +34,6 @@ public class DemoServiceImpl implements DemoService {
     public String sayHello(String user) {
         return "hello:"+user;
     }
-/*
 
     @Override
     public String saySorry(String user) {
@@ -68,7 +67,6 @@ public class DemoServiceImpl implements DemoService {
             IOUtils.closeQuietly(outputStream);
         }
     }
-*/
 
 
 }

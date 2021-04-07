@@ -1,19 +1,17 @@
-import com.google.common.base.Function;
-import com.google.common.base.Supplier;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import com.thunisoft.cloud.storage.client.base.config.StorageConfig;
-import com.thunisoft.cloud.storage.client.minio.provider.MinioProvider;
-import io.minio.MinioClient;
-import io.minio.errors.InvalidEndpointException;
-import io.minio.errors.InvalidPortException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Properties;
 
 public class Test {
     private static  final Logger logger = LoggerFactory.getLogger("main");

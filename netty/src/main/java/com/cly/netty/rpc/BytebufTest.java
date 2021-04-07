@@ -3,6 +3,7 @@ package com.cly.netty.rpc;
 import java.nio.ByteBuffer;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.buffer.Unpooled;
 
 public class BytebufTest {
@@ -15,7 +16,17 @@ public class BytebufTest {
         byte[] msg2Byte = msg2.getBytes(charsetName);
         byte[] dest = new byte[4];
 
-
+        /**
+         *
+         * 参考 https://www.imooc.com/article/39788?block_id=tuijian_wz
+         * 初始化 ByteBuf
+         * 1.ByteBufAllocator （实现了池化，有效的降低了分配和释放内存的开销）
+         *  1.1 PooledByteBufAllocator 池化了ByteBuf的实例以提高性能并最大限度地减少内存碎片
+         *  1.2 UnpooledByteBufAllocator 不池化ByteBuf实例， 并且在每次它被调用时都会返回一个新的实例
+         *
+         * 2.Unpooled （Netty 提供的工具类来创建未池化的ByteBuf 实例）。
+         *  创建一个未池化的基于堆内存存储的 ByteBuf 实例
+         */
 
         ByteBuf byteBuf = Unpooled.buffer(8);
         /**

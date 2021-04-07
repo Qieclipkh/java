@@ -15,10 +15,10 @@ import javax.xml.bind.annotation.XmlMimeType;
         targetNamespace = "http://service.webservice.cly.com")
 public interface DemoService {
 
-    @WebResult(name = "sssg")
+    @WebResult(name = "String")
     public String sayHello(@WebParam(name="user") String user);
 
-/*
+
     @WebResult(name = "String")
     public String saySorry(@WebParam(name="user") String user);
 
@@ -33,6 +33,6 @@ public interface DemoService {
     public void receiveClientImage(@WebParam(name = "dataHandler")
                                    @XmlMimeType(value = "application/octet-stream")
                                            DataHandler dataHandler, @WebParam(name = "filename")
-                                           String filename);*/
+                                           String filename);
 
 }
